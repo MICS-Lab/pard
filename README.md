@@ -77,6 +77,28 @@ TOTAL                                45     10    78%
 - [Corresponding PyPI page](https://pypi.org/project/pard/)
 
 
+### Citation
+If you use this software, please cite it as below.
+
+- APA:
+
+`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.5) [Computer software].
+https://doi.org/10.5281/zenodo.7013169`
+
+- BibTeX:
+
+```
+@software{lhotte_pard_2022,
+author = {Lhotte, Romain},
+doi = {10.5281/zenodo.7013169},
+month = {8},
+title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
+version = {0.1.5},
+year = {2022}
+}
+```
+
+
 ### References
 - [1] Grantham, R., 1974. Amino acid difference formula to help explain protein evolution. science, 185(4154), 
 pp.862-864.
