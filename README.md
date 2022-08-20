@@ -23,21 +23,33 @@ One typical use is to establish a 'distance' between a wild-type protein and its
 To use `pard`, run `pip install pard` in your terminal.
 
 #### Usage
+```py
+import pard
 
+amino_acid_1: str = "W"  # Tryptophan
+amino_acid_2: str = "L"  # Leucine
+distance: int = grantham.grantham(amino_acid_1, amino_acid_2)
+print(distance)
+```
+will output:
+```
+>>> 61
+```
+which is the correct value [1].
 
 #### Unit tests
 ```
-Name                              Stmts   Miss  Cover
-
------------------------------------------------------
-pard\__init__.py                      2      0   100%
-pard\grantham.py                      4      0   100%
-pard\raw_python_dictionaries.py      18     10    44%
+Name                              Stmts   Miss  Cover   Missing
+---------------------------------------------------------------
+pard\__init__.py                      3      0   100%
+pard\grantham.py                      3      0   100%
+pard\raw_python_dictionaries.py      19     10    47%   2-403, 407-810, 814-1217, 1229-1632, 1643-2046
 tests\__init__.py                     0      0   100%
-tests\test_grantham.py               15      0   100%
+tests\test_grantham.py               17      0   100%
 tests\test_pard.py                    3      0   100%
------------------------------------------------------
-TOTAL                                42     10    76%
+---------------------------------------------------------------
+TOTAL                                45     10    78%
+
 ```
 
 

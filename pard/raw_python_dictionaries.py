@@ -2451,3 +2451,6 @@ def make_grantham_dict() -> dict[tuple[str, str], int]:
     }
 
     return grantham_dict
+
+
+GRANTHAM_DICT: dict[tuple[str, str], int] = make_grantham_dict()
