@@ -1,4 +1,4 @@
-from parm import __version__
+from pard import __version__
 
 
 def test_version():
