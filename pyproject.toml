@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "parm"
+name = "pard"
 version = "0.1.0"
 description = ""
 authors = ["JasonMendoza2008 <lhotteromain@gmail.com>"]
