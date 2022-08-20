@@ -1,3 +1,3 @@
-# PARM
-**P**hysicochemical **A**mino acid **R**eplacement **M**atrices (**PARM**)
+# PARD
+**P**hysicochemical **A**mino acid **R**eplacement **D**istances (**PARD**)
 
