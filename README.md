@@ -28,7 +28,7 @@ import pard
 
 amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
-distance: int = grantham.grantham(amino_acid_1, amino_acid_2)
+distance: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
 print(distance)
 ```
 will output:
