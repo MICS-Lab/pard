@@ -5,17 +5,20 @@
 Amino acid replacements (also referred to as substitutions) are changes from one amino acid to a different one in a
 protein - and there are different ways to assess the difference between the two amino acids that come into play in an
 amino acid replacement.
+
 One can look at one or several properties' discrepancy between two amino acids. To list only a few: polarity [1][3][4],
 molecular volume / relative sizes of amino-acid side chains [1][3][4], mean number of lone pair electrons on the 
 side-chain [2], maximum moment of inertia for rotation at the α―β bond [2] or at the β―γ bond [2] or at the γ―δ
 bond [2], presence of a pyrrolidine ring (proline (P)) [2], experimental protein activity and stability after 
-exchanging one amino acid into another [5], etc.).
+exchanging one amino acid into another [5], etc.
+
+`pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
+straightforward with Python.
+
+One typical use is to establish a 'distance' between a wild-type protein and its mutated version.
 
 
 ### Getting started
-`pard` is a package designed to make **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
-straightforward.
-
 #### Install from PyPI (recommended)
 To use `pard`, run `pip install pard` in your terminal.
 
