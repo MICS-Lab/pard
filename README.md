@@ -48,7 +48,7 @@ will output:
 ```
 >>> 61
 ```
-which is the correct value [1].
+which is the correct value [[1]](https://www.science.org/doi/10.1126/science.185.4154.862).
 
 #### Unit tests
 ```
