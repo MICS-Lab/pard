@@ -1,2 +1,3 @@
 # PARM
-Physicochemical Amino acid Replacement Matrices (PARM)
+**P**hysicochemical **A**mino acid **R**eplacement **M**atrices (**PARM**)
+
