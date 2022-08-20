@@ -6,11 +6,24 @@ Amino acid replacements (also referred to as substitutions) are changes from one
 protein - and there are different ways to assess the difference between the two amino acids that come into play in an
 amino acid replacement.
 
-One can look at one or several properties' discrepancy between two amino acids. To list only a few: polarity [1][3][4],
-molecular volume / relative sizes of amino-acid side chains [1][3][4], mean number of lone pair electrons on the 
-side-chain [2], maximum moment of inertia for rotation at the α―β bond [2] or at the β―γ bond [2] or at the γ―δ
-bond [2], presence of a pyrrolidine ring (proline (P)) [2], experimental protein activity and stability after 
-exchanging one amino acid into another [5], etc.
+One can look at one or several properties' discrepancy between two amino acids.
+To list only a few: polarity
+[[1]](https://www.science.org/doi/10.1126/science.185.4154.862) [[3]](https://www.nature.com/articles/215355a0) 
+[[4]](https://link.springer.com/article/10.1007/BF01732340),
+molecular volume / relative sizes of amino-acid side chains 
+[[1]](https://www.science.org/doi/10.1126/science.185.4154.862) [[3]](https://www.nature.com/articles/215355a0)
+[[4]](https://link.springer.com/article/10.1007/BF01732340), 
+mean number of lone pair electrons on the side-chain
+[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123),
+maximum moment of inertia for rotation at the α―β bond
+[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123)
+or at the β―γ bond [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123)
+or at the γ―δ bond [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123), 
+presence of a pyrrolidine ring (proline (P))
+[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123), 
+experimental protein activity and stability after exchanging one amino acid into another
+[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/),
+etc.
 
 `pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
 straightforward with Python.
