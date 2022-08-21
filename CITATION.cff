@@ -5,7 +5,7 @@ authors:
     given-names: Romain
     orcid: https://orcid.org/0000-0002-6131-5415
 title: Physicochemical Amino acid Replacement Distances (PARD) package
-version: 0.1.5b
+version: 0.1.6
 doi: 10.5281/zenodo.7013169
 link: https://github.com/MICS-Lab/pard
 date-released: 2022-08-20
