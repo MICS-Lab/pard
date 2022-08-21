@@ -22,3 +22,4 @@ def test_grantham() -> None:
     assert grantham("L", "L") == 0
     assert grantham("M", "M") == 0
     assert grantham("W", "W") == 0
+    assert grantham("H", "H") == 0

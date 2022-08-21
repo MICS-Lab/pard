@@ -1,5 +1,6 @@
 ## PARD (Physicochemical Amino acid Replacement Distances)
 [![DOI](https://zenodo.org/badge/526882024.svg)](https://zenodo.org/badge/latestdoi/526882024)
+![Coverage](https://github.com/MICS-Lab/pard/readme_resources/coverage.svg)
 
 ### Overview
 Amino acid replacements (also referred to as substitutions) are changes from one amino acid to a different one in a
@@ -44,6 +45,15 @@ amino_acid_2: str = "L"  # Leucine
 distance: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
 print(distance)
 ```
+or equivalently
+```py
+from pard.grantham import grantham
+
+amino_acid_1: str = "W"  # Tryptophan
+amino_acid_2: str = "L"  # Leucine
+distance: int =  grantham('W', 'I')
+print(distance)
+```
 will output:
 ```
 >>> 61
@@ -52,17 +62,19 @@ which is the correct value [[1]](https://www.science.org/doi/10.1126/science.185
 
 #### Unit tests
 ```
-Name                              Stmts   Miss  Cover   Missing
----------------------------------------------------------------
-pard\__init__.py                      3      0   100%
-pard\grantham.py                      3      0   100%
-pard\raw_python_dictionaries.py      19     10    47%   2-403, 407-810, 814-1217, 1229-1632, 1643-2046
-tests\__init__.py                     0      0   100%
-tests\test_grantham.py               17      0   100%
-tests\test_pard.py                    3      0   100%
----------------------------------------------------------------
-TOTAL                                45     10    78%
-
+Name                                    Stmts   Miss  Cover
+-----------------------------------------------------------
+pard\__init__.py                            3      0   100%
+pard\grantham.py                            3      0   100%
+pard\raw_python_dictionaries.py            20      8    60%
+pard\sneath.py                              3      0   100%
+tests\__init__.py                           0      0   100%
+tests\test_grantham.py                     17      0   100%
+tests\test_pard.py                          3      0   100%
+tests\test_raw_python_dictionaries.py       6      0   100%
+tests\test_sneath.py                       17      0   100%
+-----------------------------------------------------------
+TOTAL                                      72      8    89%
 ```
 
 
