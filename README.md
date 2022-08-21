@@ -1,6 +1,8 @@
 ## PARD (Physicochemical Amino acid Replacement Distances)
 [![DOI](https://zenodo.org/badge/526882024.svg)](https://zenodo.org/badge/latestdoi/526882024)
-![Coverage](readme_resources/coverage.svg)
+![Coverage](
+https://raw.githubusercontent.com/MICS-Lab/pard/24245f5174070defbe2d5e136a0e4c9b4c9d6eaf/readme_resources/coverage.svg
+)
 
 ### Overview
 Amino acid replacements (also referred to as substitutions) are changes from one amino acid to a different one in a
@@ -104,7 +106,7 @@ If you use this software, please cite it as below.
 
 - APA:
 
-`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.6) [Computer software].
+`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.6.2) [Computer software].
 https://doi.org/10.5281/zenodo.7013169`
 
 - BibTeX:
@@ -115,7 +117,7 @@ author = {Lhotte, Romain},
 doi = {10.5281/zenodo.7013169},
 month = {8},
 title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-version = {0.1.6},
+version = {0.1.6.2},
 year = {2022}
 }
 ```
