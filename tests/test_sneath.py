@@ -1,7 +1,7 @@
 from pard.sneath import sneath
 
 
-def test_grantham() -> None:
+def test_sneath() -> None:
     assert sneath("L", "I") == 5
     assert sneath("I", "L") == 5
 
