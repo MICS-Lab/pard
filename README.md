@@ -1,6 +1,6 @@
 ## PARD (Physicochemical Amino acid Replacement Distances)
 [![DOI](https://zenodo.org/badge/526882024.svg)](https://zenodo.org/badge/latestdoi/526882024)
-![Coverage](https://github.com/MICS-Lab/pard/readme_resources/coverage.svg)
+![Coverage](readme_resources/coverage.svg)
 
 ### Overview
 Amino acid replacements (also referred to as substitutions) are changes from one amino acid to a different one in a
