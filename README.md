@@ -42,23 +42,33 @@ import pard
 
 amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
-distance: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
-print(distance)
+distance_grantham: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
+distance_sneath: int   = pard.sneath.sneath(amino_acid_1, amino_acid_2)
+
+print(distance_grantham)
+print(distance_sneath)
 ```
 or equivalently
 ```py
 from pard.grantham import grantham
+from pard.sneath import sneath
 
 amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
-distance: int =  grantham('W', 'I')
-print(distance)
+distance_grantham: int = grantham(amino_acid_1, amino_acid_2)
+distance_sneath: int   = sneath(amino_acid_1, amino_acid_2)
+
+print(distance_grantham)
+print(distance_sneath)
 ```
 will output:
 ```
 >>> 61
+>>> 30
 ```
-which is the correct value [[1]](https://www.science.org/doi/10.1126/science.185.4154.862).
+which are the correct values 
+[[1]](https://www.science.org/doi/10.1126/science.185.4154.862)
+[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123).
 
 #### Unit tests
 ```
@@ -94,7 +104,7 @@ If you use this software, please cite it as below.
 
 - APA:
 
-`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.5) [Computer software].
+`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.5b) [Computer software].
 https://doi.org/10.5281/zenodo.7013169`
 
 - BibTeX:
@@ -105,7 +115,7 @@ author = {Lhotte, Romain},
 doi = {10.5281/zenodo.7013169},
 month = {8},
 title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-version = {0.1.5},
+version = {0.1.5b},
 year = {2022}
 }
 ```

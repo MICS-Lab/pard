@@ -1,6 +1,6 @@
 import pard.raw_python_dictionaries
 
-def sneath(amino_acid_1: str, amino_acid_2: str) -> float:
+def sneath(amino_acid_1: str, amino_acid_2: str) -> int:
     """
     :param amino_acid_1: 1 letter code of the first amino acid
     :param amino_acid_2: 1 letter code of the third amino acid

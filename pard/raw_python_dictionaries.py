@@ -1,10 +1,10 @@
-def make_sneath_dict() -> dict[tuple[str, str], float]:
+def make_sneath_dict() -> dict[tuple[str, str], int]:
     """
     :return: A dictionary representative of TABLE 2 from Relations between Chemical Structure and Biological Activity
              in Peptides by P. H. A. SNEATH. Keys are pairs of strings. Cf. scientific paper for more details on how
              those scores are derived.
     """
-    sneath_dict: dict[tuple[str, str], float] = {
+    sneath_dict: dict[tuple[str, str], int] = {
         ('L', 'L'): 0,
         ('L', 'I'): 5,
         ('I', 'L'): 5,
@@ -2461,4 +2461,4 @@ def make_grantham_dict() -> dict[tuple[str, str], int]:
 
 
 GRANTHAM_DICT: dict[tuple[str, str], int] = make_grantham_dict()
-SNEATH_DICT: dict[tuple[str, str], float] = make_sneath_dict()
+SNEATH_DICT: dict[tuple[str, str], int] = make_sneath_dict()
