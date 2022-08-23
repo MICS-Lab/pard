@@ -822,22 +822,22 @@ def make_miyata_dict() -> dict[tuple[str, str], float]:
     return miyata_dict
 
 
-def make_asymmetric_epstein_dict() -> dict[tuple[str, str], float]:
+def make_symmetric_epstein_dict() -> dict[tuple[str, str], float]:
     """
-    :return: A dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid Changes in the Evolution of
-             Homologous Proteins' by Charles J. Epstein. Keys are pairs of strings. Cf. scientific paper for
-             more details on how those scores are derived.
+    :return: A symmetrised version of the dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid
+             Changes in the Evolution of Homologous Proteins' by Charles J. Epstein. Keys are pairs of strings. Cf.
+             scientific paper for more details on how those scores are derived.
     """
     epstein_dict: dict[tuple[str, str], float] = {}
 
     return epstein_dict
 
 
-def make_symmetric_epstein_dict() -> dict[tuple[str, str], float]:
+def make_asymmetric_epstein_dict() -> dict[tuple[str, str], float]:
     """
-    :return: A symmetrised version of the dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid
-             Changes in the Evolution of Homologous Proteins' by Charles J. Epstein. Keys are pairs of strings. Cf.
-             scientific paper for more details on how those scores are derived.
+    :return: A dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid Changes in the Evolution of
+             Homologous Proteins' by Charles J. Epstein. Keys are pairs of strings. Cf. scientific paper for
+             more details on how those scores are derived.
     """
     epstein_dict: dict[tuple[str, str], float] = {}
 
