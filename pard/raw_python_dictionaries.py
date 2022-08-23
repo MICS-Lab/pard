@@ -2889,8 +2889,19 @@ def make_grantham_dict() -> dict[tuple[str, str], int]:
     return grantham_dict
 
 
-SNEATH_DICT: dict[tuple[str, str], int]               = make_sneath_dict()
-MIYATA_DICT: dict[tuple[str, str], float]             = make_miyata_dict()
-SYMMETRIC_EPSTEIN_DICT: dict[tuple[str, str], float]  = make_symmetric_epstein_dict()
-ASYMMETRIC_EPSTEIN_DICT: dict[tuple[str, str], float] = make_asymmetric_epstein_dict()
-GRANTHAM_DICT: dict[tuple[str, str], int]             = make_grantham_dict()
+SNEATH_DICT: dict[tuple[str, str], int]
+MIYATA_DICT: dict[tuple[str, str], float]
+SYMMETRIC_EPSTEIN_DICT: dict[tuple[str, str], float]
+ASYMMETRIC_EPSTEIN_DICT: dict[tuple[str, str], float]
+SYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT: dict[tuple[str, str], float]
+ASYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT: dict[tuple[str, str], int | None]
+GRANTHAM_DICT: dict[tuple[str, str], int]
+
+
+SNEATH_DICT                                  = make_sneath_dict()
+MIYATA_DICT                                  = make_miyata_dict()
+SYMMETRIC_EPSTEIN_DICT                       = make_symmetric_epstein_dict()
+ASYMMETRIC_EPSTEIN_DICT                      = make_asymmetric_epstein_dict()
+SYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT  = make_symmetric_experimental_exchangeability_dict()
+ASYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT = make_asymmetric_experimental_exchangeability_dict()
+GRANTHAM_DICT                                = make_grantham_dict()
