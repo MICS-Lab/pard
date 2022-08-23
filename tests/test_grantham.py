@@ -3,7 +3,13 @@ from pard.grantham import grantham
 
 def test_grantham() -> None:
     assert grantham("L", "I") == 5
+    assert grantham("Leu", "Ile") == 5
+    assert grantham("leu", "ile") == 5
+    assert grantham("L", "ile") == 5
     assert grantham("I", "L") == 5
+    assert grantham("Ile", "Leu") == 5
+    assert grantham("ILE", "LEU") == 5
+    assert grantham("ILE", "L") == 5
 
     assert grantham("N", "I") == 149
     assert grantham("I", "N") == 149
@@ -23,3 +29,4 @@ def test_grantham() -> None:
     assert grantham("M", "M") == 0
     assert grantham("W", "W") == 0
     assert grantham("H", "H") == 0
+    assert grantham("His", "His") == 0

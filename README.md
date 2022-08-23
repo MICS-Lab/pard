@@ -85,6 +85,11 @@ which are the correct values
 [[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/)
 .
 
+#### Exit codes:
+```
+- 1: Argument amino_acid_1 or amino_acid_2 is neither of length 1 nor length 3. See error message.
+```
+
 #### Unit tests
 ```
 Name                                         Stmts   Miss  Cover

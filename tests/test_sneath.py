@@ -12,7 +12,9 @@ def test_sneath() -> None:
     assert sneath("L", "N") == 20
 
     assert sneath("M", "W") == 31
+    assert sneath("Met", "Trp") == 31
     assert sneath("W", "M") == 31
+    assert sneath("TRP", "M") == 31
 
     assert sneath("L", "W") == 30
     assert sneath("W", "L") == 30
@@ -23,3 +25,4 @@ def test_sneath() -> None:
     assert sneath("M", "M") == 0
     assert sneath("W", "W") == 0
     assert sneath("H", "H") == 0
+    assert sneath("His", "His") == 0

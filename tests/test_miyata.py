@@ -3,7 +3,13 @@ from pard.miyata import miyata
 
 def test_miyata() -> None:
     assert miyata("C", "W") == 3.34
+    assert miyata("Cys", "Trp") == 3.34
+    assert miyata("cys", "trp") == 3.34
+    assert miyata("C", "trp") == 3.34
     assert miyata("W", "C") == 3.34
+    assert miyata("Trp", "Cys") == 3.34
+    assert miyata("TRP", "CYS") == 3.34
+    assert miyata("W", "CYS") == 3.34
 
     assert miyata("W", "I") == 1.72
     assert miyata("I", "W") == 1.72
@@ -23,3 +29,4 @@ def test_miyata() -> None:
     assert miyata("M", "M") == 0
     assert miyata("W", "W") == 0
     assert miyata("H", "H") == 0
+    assert miyata("His", "His") == 0

@@ -1,7 +1,9 @@
 import logging
 
 import pard.raw_python_dictionaries
+from pard.handling_3_letter_code_decorator import handling_3_letter_code
 
+@handling_3_letter_code
 def experimental_exchangeability(
         amino_acid_1: str,
         amino_acid_2: str,
