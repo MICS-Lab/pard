@@ -67,7 +67,7 @@ amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
 distance_grantham: int = grantham(amino_acid_1, amino_acid_2)
 distance_sneath: int   = sneath(amino_acid_1, amino_acid_2)
-distance_ee: float = experimental_exchangeability(amino_acid_1, amino_acid_2, False, warning=False)
+distance_ee: float     = experimental_exchangeability(amino_acid_1, amino_acid_2, False, warning=False)
 
 print(distance_grantham)
 print(distance_sneath)
