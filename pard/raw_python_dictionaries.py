@@ -824,9 +824,10 @@ def make_miyata_dict() -> dict[tuple[str, str], float]:
 
 def make_symmetric_epstein_dict() -> dict[tuple[str, str], float]:
     """
-    :return: A symmetrised version of the dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid
+    :return: A symmetrised* version of the dictionary representative of TABLE 2 from 'Non-randomness of Amino-acid
              Changes in the Evolution of Homologous Proteins' by Charles J. Epstein. Keys are pairs of strings. Cf.
              scientific paper for more details on how those scores are derived.
+             * cf. paper for formula used to infer the symmetrised version (mean).
     """
     epstein_dict: dict[tuple[str, str], float] = {}
 
@@ -848,7 +849,7 @@ def make_symmetric_experimental_exchangeability_dict() -> dict[tuple[str, str], 
     """
     :return: A dictionary representative of TABLE 2 & 3 from 'The Exchangeability of Amino Acids in Proteins' by Lev Y.
              Yampolsky and Arlin Stoltzfus. Keys are pairs of strings. Cf. scientific paper for more details on how
-             those scores are derived.
+             those scores are derived. Cf. paper for formula used to infer the symmetrised version (weighted mean).
              It does not have any missing values like the asymmetrical verison does, cf. article:
              'The symmetric matrix EXSij has no missing values because exchange data are available for every possible
               unordered pair of amino acids.'
