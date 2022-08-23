@@ -1,7 +1,7 @@
 ## PARD (Physicochemical Amino acid Replacement Distances)
 [![DOI](https://zenodo.org/badge/526882024.svg)](https://zenodo.org/badge/latestdoi/526882024)
 ![Coverage](
-https://raw.githubusercontent.com/MICS-Lab/pard/24245f5174070defbe2d5e136a0e4c9b4c9d6eaf/readme_resources/coverage.svg
+https://raw.githubusercontent.com/MICS-Lab/pard/a0633c0b5e95bff565c6b9f92811b8b7bc0c8a6b/readme_resources/coverage.svg
 )
 
 ### Overview
@@ -74,19 +74,25 @@ which are the correct values
 
 #### Unit tests
 ```
-Name                                    Stmts   Miss  Cover
------------------------------------------------------------
-pard\__init__.py                            3      0   100%
-pard\grantham.py                            3      0   100%
-pard\raw_python_dictionaries.py            20      8    60%
-pard\sneath.py                              3      0   100%
-tests\__init__.py                           0      0   100%
-tests\test_grantham.py                     17      0   100%
-tests\test_pard.py                          3      0   100%
-tests\test_raw_python_dictionaries.py       6      0   100%
-tests\test_sneath.py                       17      0   100%
------------------------------------------------------------
-TOTAL                                      72      8    89%
+Name                                         Stmts   Miss  Cover
+----------------------------------------------------------------
+pard\__init__.py                                 3      0   100%
+pard\epstein.py                                  5      0   100%
+pard\experimental_exchangeability.py             8      1    88%
+pard\grantham.py                                 3      0   100%
+pard\miyata.py                                   3      0   100%
+pard\raw_python_dictionaries.py                 35      0   100%
+pard\sneath.py                                   3      0   100%
+tests\__init__.py                                0      0   100%
+tests\test_epstein.py                           34      0   100%
+tests\test_experimental_exchangeability.py      22      0   100%
+tests\test_grantham.py                          18      0   100%
+tests\test_miyata.py                            18      0   100%
+tests\test_pard.py                               3      0   100%
+tests\test_raw_python_dictionaries.py           12      0   100%
+tests\test_sneath.py                            18      0   100%
+----------------------------------------------------------------
+TOTAL                                          185      1    99%
 ```
 
 
@@ -106,7 +112,7 @@ If you use this software, please cite it as below.
 
 - APA:
 
-`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.6.2) [Computer software].
+`Lhotte, R. (2022). Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.1.7) [Computer software].
 https://doi.org/10.5281/zenodo.7013169`
 
 - BibTeX:
@@ -117,7 +123,7 @@ author = {Lhotte, Romain},
 doi = {10.5281/zenodo.7013169},
 month = {8},
 title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-version = {0.1.6.2},
+version = {0.1.7},
 year = {2022}
 }
 ```
