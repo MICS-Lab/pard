@@ -46,31 +46,44 @@ amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
 distance_grantham: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
 distance_sneath: int   = pard.sneath.sneath(amino_acid_1, amino_acid_2)
+distance_ee: float     = pard.experimental_exchangeability.experimental_exchangeability(
+    amino_acid_1, 
+    amino_acid_2, 
+    False, 
+    warning=False
+)
 
 print(distance_grantham)
 print(distance_sneath)
+print(distance_ee)
 ```
 or equivalently
 ```py
 from pard.grantham import grantham
 from pard.sneath import sneath
+from pard.experimental_exchangeability import experimental_exchangeability
 
 amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
 distance_grantham: int = grantham(amino_acid_1, amino_acid_2)
 distance_sneath: int   = sneath(amino_acid_1, amino_acid_2)
+distance_ee: float = experimental_exchangeability(amino_acid_1, amino_acid_2, False, warning=False)
 
 print(distance_grantham)
 print(distance_sneath)
+print(distance_ee)
 ```
 will output:
 ```
 >>> 61
 >>> 30
+>>> 177
 ```
 which are the correct values 
 [[1]](https://www.science.org/doi/10.1126/science.185.4154.862)
-[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123).
+[[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123)
+[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/)
+.
 
 #### Unit tests
 ```
