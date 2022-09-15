@@ -3,6 +3,7 @@
 ![Coverage](
 https://raw.githubusercontent.com/MICS-Lab/pard/a0633c0b5e95bff565c6b9f92811b8b7bc0c8a6b/readme_resources/coverage.svg
 )
+[![Downloads](https://pepy.tech/badge/pard)](https://pepy.tech/project/pard)
 
 ### Overview
 Amino acid replacements (also referred to as substitutions) are changes from one amino acid to a different one in a
