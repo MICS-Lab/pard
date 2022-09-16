@@ -13,8 +13,9 @@ def experimental_exchangeability(
     """
     :param amino_acid_1: 1 letter code of the first amino acid
     :param amino_acid_2: 1 letter code of the third amino acid
-    :param symmetric: whether the symmetric version of the matrix is wanted or not (i.e. exchanges of known or
+    :param symmetric: whether the symmetric version of the matrix is wanted or not (i.e. exchanges of known* or
                       unknown direction)
+                      * amino_acid_1 -> amino_acid_2
     :param warning: Set warning to False to stop seeing the warning
 
     :return: An integer / float / None representing the experimental exchangeability distance between amino_acid_1 and
