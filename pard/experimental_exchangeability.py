@@ -25,9 +25,9 @@ def experimental_exchangeability(
         logging.warning(" Friendly reminder that exchangeability is not a distance. Rather, it is the mean activity of"
                         " variants with an exchange from amino acid amino_acid_1 to amino_acid_2. Meaning, high"
                         " exchangeability is likely to mean that the amino acids are similar, although this statement"
-                        " is debatable. \n"
-                        "To remove this warning, call the function experimental_exchangeability with the optional"
-                        " argument 'warning=False'.")
+                        " certainly is debatable.\n"
+                        "To remove this warning, call the function experimental_exchangeability with the optional "
+                        "argument 'warning=False'.")
     if symmetric:
         return pard.raw_python_dictionaries.SYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT[(amino_acid_1, amino_acid_2)]
     else:
