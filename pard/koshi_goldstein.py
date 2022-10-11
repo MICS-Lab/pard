@@ -26,8 +26,8 @@ def koshi_goldstein(
                         "likelihood of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
                         "score is likely to mean that the amino acids are similar, although this statement certainly "
                         "is debatable.\n"
-                        "To remove this warning, call the function experimental_exchangeability with the optional "
-                        "argument 'warning=False'.")
+                        "To remove this warning, call the function koshi_goldstein with the optional argument "
+                        "'warning=False'.")
     if symmetric:
         return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_DICT[(amino_acid_1, amino_acid_2)]
     else:
