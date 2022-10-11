@@ -1,4 +1,4 @@
-import enum
+from enum import Enum
 import logging
 
 import pard.raw_python_dictionaries
