@@ -72,3 +72,12 @@ def koshi_goldstein(
                 return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
+        case MatrixType.BURIED:
+            if symmetric:
+                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]
+            else:
+                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]

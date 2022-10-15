@@ -73,3 +73,27 @@ def test_koshi_goldstein_exposed_residues() -> None:
     assert koshi_goldstein("-", "-", MatrixType.EXPOSED, True, warning=True) == 60.2
     assert koshi_goldstein("A", "A", MatrixType.EXPOSED, True, warning=True) == 51.3
     assert koshi_goldstein("Ala", "Ala", MatrixType.EXPOSED, True, warning=True) == 51.3
+
+
+def test_koshi_goldstein_buried_residues() -> None:
+    """
+    Tests the exposed residues koshi_golstein matrix
+
+    :return: Nothing
+    """
+    # Symmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.BURIED, True, warning=False) == pytest.approx((1.0+0.2)/2)
+    assert koshi_goldstein("-", "A", MatrixType.BURIED, True, warning=False) == pytest.approx((0.2+1.0)/2)
+
+    # Asymmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.BURIED, False, warning=False) == 1.0
+    assert koshi_goldstein("-", "A", MatrixType.BURIED, False, warning=False) == 0.2
+
+    # With warning; tests still go through?
+    # Exposed Residues
+    assert koshi_goldstein("-", "-", MatrixType.BURIED, False, warning=True) == 79.2
+    assert koshi_goldstein("A", "A", MatrixType.BURIED, False, warning=True) == 76.3
+    assert koshi_goldstein("Ala", "Ala", MatrixType.BURIED, False, warning=True) == 76.3
+    assert koshi_goldstein("-", "-", MatrixType.BURIED, True, warning=True) == 79.2
+    assert koshi_goldstein("A", "A", MatrixType.BURIED, True, warning=True) == 76.3
+    assert koshi_goldstein("Ala", "Ala", MatrixType.BURIED, True, warning=True) == 76.3

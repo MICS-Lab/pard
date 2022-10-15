@@ -6,6 +6,8 @@ from pard.raw_python_dictionaries import (
     make_symmetric_experimental_exchangeability_dict,
     make_asymmetric_experimental_exchangeability_dict,
     make_grantham_dict,
+    make_symmetric_koshi_golstein_dicts,
+    make_asymmetric_koshi_golstein_dicts
 )
 
 def test_length_dict() -> None:
@@ -24,6 +26,17 @@ def test_length_dict() -> None:
     symmetric_experimental_exchangeability_dict  = make_symmetric_experimental_exchangeability_dict()
     asymmetric_experimental_exchangeability_dict = make_asymmetric_experimental_exchangeability_dict()
     grantham_dict                                = make_grantham_dict()
+    # Koshi-Goldstein dicts
+    (
+        symmetric_koshi_goldstein_all_residues_dict,
+        symmetric_koshi_goldstein_exposed_residues_dict,
+        symmetric_koshi_goldstein_buried_residues_dict,
+    ) = make_symmetric_koshi_golstein_dicts()
+    (
+        asymmetric_koshi_goldstein_all_residues_dict,
+        asymmetric_koshi_goldstein_exposed_residues_dict,
+        asymmetric_koshi_goldstein_buried_residues_dict,
+    ) = make_asymmetric_koshi_golstein_dicts()
 
     assert(len(sneath_dict) == 400)
     assert(len(miyata_dict) == 400)
@@ -32,3 +45,10 @@ def test_length_dict() -> None:
     assert(len(symmetric_experimental_exchangeability_dict) == 400)
     assert(len(asymmetric_experimental_exchangeability_dict) == 400)
     assert(len(grantham_dict) == 400)
+    # Koshi-Goldstein matrices
+    assert(len(symmetric_koshi_goldstein_all_residues_dict) == 441)
+    assert(len(symmetric_koshi_goldstein_exposed_residues_dict) == 441)
+    assert(len(symmetric_koshi_goldstein_buried_residues_dict) == 441)
+    assert(len(asymmetric_koshi_goldstein_all_residues_dict) == 441)
+    assert(len(asymmetric_koshi_goldstein_exposed_residues_dict) == 441)
+    assert(len(asymmetric_koshi_goldstein_buried_residues_dict) == 441)
