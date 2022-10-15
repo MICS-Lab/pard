@@ -15,10 +15,12 @@ class MatrixType(Enum):
     COIL = 7
     BURIED_HELIX = 8
     BURIED_SHEET = 9
-    BURIED_TURN = 10
-    BURIED_COIL = 11
-    EXPOSED_TURN = 12
-    EXPOSED_COIL = 13
+    EXPOSED_HELIX = 10
+    EXPOSED_SHEET = 11
+    BURIED_TURN = 12
+    BURIED_COIL = 13
+    EXPOSED_TURN = 14
+    EXPOSED_COIL = 15
 
 
 @handling_3_letter_code
@@ -43,12 +45,28 @@ def koshi_goldstein(
     """
     if warning:
         logging.warning(" Friendly reminder that the koshi_goldstein score is not a distance. Rather, it is the "
-                        "likelihood of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
+                        "probability of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
                         "score is likely to mean that the amino acids are similar, although this statement certainly "
                         "is debatable.\n"
                         "To remove this warning, call the function koshi_goldstein with the optional argument "
                         "'warning=False'.")
-    if symmetric:
-        return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_DICT[(amino_acid_1, amino_acid_2)]
-    else:
-        return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_DICT[(amino_acid_1, amino_acid_2)]
+
+    match matrix_type:
+        case MatrixType.ALL_RESIDUES:
+            if symmetric:
+                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]
+            else:
+                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]
+        case MatrixType.EXPOSED:
+            if symmetric:
+                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]
+            else:
+                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
+                    (amino_acid_1, amino_acid_2)
+                ]
