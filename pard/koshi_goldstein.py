@@ -25,11 +25,11 @@ class MatrixType(Enum):
 
 @handling_3_letter_code
 def koshi_goldstein(
-        amino_acid_1: str,
-        amino_acid_2: str,
-        matrix_type: MatrixType,
-        symmetric: bool,
-        warning: bool = True,
+    amino_acid_1: str,
+    amino_acid_2: str,
+    matrix_type: MatrixType,
+    symmetric: bool,
+    warning: bool = True,
 ) -> float:
     """
     :param amino_acid_1: 1 letter code of the first amino acid
@@ -44,12 +44,14 @@ def koshi_goldstein(
              amino_acid_2 (x1000)
     """
     if warning:
-        logging.warning(" Friendly reminder that the koshi_goldstein score is not a distance. Rather, it is the "
-                        "probability of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
-                        "score is likely to mean that the amino acids are similar, although this statement certainly "
-                        "is debatable.\n"
-                        "To remove this warning, call the function koshi_goldstein with the optional argument "
-                        "'warning=False'.")
+        logging.warning(
+            " Friendly reminder that the koshi_goldstein score is not a distance. Rather, it is the "
+            "probability of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
+            "score is likely to mean that the amino acids are similar, although this statement certainly "
+            "is debatable.\n"
+            "To remove this warning, call the function koshi_goldstein with the optional argument "
+            "'warning=False'."
+        )
 
     match matrix_type:
         case MatrixType.ALL_RESIDUES:
