@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pard"
 version = "0.2.1.0"
-description = ""
+description = "Physicochemical Amino acid Replacement Distances"
 authors = ["JasonMendoza2008 <lhotteromain@gmail.com>"]
 readme = "README.md"
 
