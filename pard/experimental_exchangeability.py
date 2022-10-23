@@ -32,6 +32,6 @@ def experimental_exchangeability(
             "argument 'warning=False'."
         )
     if symmetric:
-        return pard.raw_python_dictionaries.SYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT[(amino_acid_1, amino_acid_2)]
+        return pard._raw_python_dictionaries.SYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT[(amino_acid_1, amino_acid_2)]
     else:
-        return pard.raw_python_dictionaries.ASYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT[(amino_acid_1, amino_acid_2)]
+        return pard._raw_python_dictionaries.ASYMMETRIC_EXPERIMENTAL_EXCHANGEABILITY_DICT[(amino_acid_1, amino_acid_2)]

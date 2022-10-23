@@ -56,28 +56,28 @@ def koshi_goldstein(
     match matrix_type:
         case MatrixType.ALL_RESIDUES:
             if symmetric:
-                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
             else:
-                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_ALL_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
         case MatrixType.EXPOSED:
             if symmetric:
-                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
             else:
-                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_EXPOSED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
         case MatrixType.BURIED:
             if symmetric:
-                return pard.raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.SYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
             else:
-                return pard.raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
+                return pard._raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]

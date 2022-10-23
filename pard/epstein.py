@@ -12,6 +12,6 @@ def epstein(amino_acid_1: str, amino_acid_2: str, symmetric: bool) -> float:
     :return: An integer representing the Miyata distance between amino_acid_1 and amino_acid_2
     """
     if symmetric:
-        return pard.raw_python_dictionaries.SYMMETRIC_EPSTEIN_DICT[(amino_acid_1, amino_acid_2)]
+        return pard._raw_python_dictionaries.SYMMETRIC_EPSTEIN_DICT[(amino_acid_1, amino_acid_2)]
     else:
-        return pard.raw_python_dictionaries.ASYMMETRIC_EPSTEIN_DICT[(amino_acid_1, amino_acid_2)]
+        return pard._raw_python_dictionaries.ASYMMETRIC_EPSTEIN_DICT[(amino_acid_1, amino_acid_2)]
