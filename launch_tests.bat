@@ -1,3 +1,2 @@
-pytest
-coverage-badge -o readme_resources/coverage.svg
+python unit_tests_simple.py
 pause
