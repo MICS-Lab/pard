@@ -1,7 +1,7 @@
 import logging
 
-import pard.raw_python_dictionaries
-from pard.handling_3_letter_code_decorator import handling_3_letter_code
+import pard._raw_python_dictionaries
+from pard._handling_3_letter_code_decorator import handling_3_letter_code
 
 
 @handling_3_letter_code

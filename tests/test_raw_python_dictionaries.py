@@ -1,4 +1,4 @@
-from pard.raw_python_dictionaries import (
+from pard._raw_python_dictionaries import (  # noqa: internal use
     make_sneath_dict,
     make_miyata_dict,
     make_symmetric_epstein_dict,
