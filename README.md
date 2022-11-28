@@ -1,7 +1,7 @@
 ## PARD (Physicochemical Amino acid Replacement Distances)
 [![DOI](https://zenodo.org/badge/526882024.svg)](https://zenodo.org/badge/latestdoi/526882024)
 ![Coverage](
-https://raw.githubusercontent.com/MICS-Lab/pard/a0633c0b5e95bff565c6b9f92811b8b7bc0c8a6b/readme_resources/coverage.svg
+readme_resources/coverage.svg
 )
 [![Downloads](https://pepy.tech/badge/pard)](https://pepy.tech/project/pard)
 
