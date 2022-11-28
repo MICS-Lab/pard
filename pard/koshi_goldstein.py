@@ -45,8 +45,8 @@ def koshi_goldstein(
     """
     if warning:
         logging.warning(
-            " Friendly reminder that the koshi_goldstein score is not a distance. Rather, it is the "
-            "probability of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
+            " Friendly reminder that the koshi_goldstein score is not a distance. Rather, it is the probability "
+            "(from 0 to 100) of a mutation from amino_acid_1 to amino_acid_2. Meaning, high koshi_goldstein "
             "score is likely to mean that the amino acids are similar, although this statement certainly "
             "is debatable.\n"
             "To remove this warning, call the function koshi_goldstein with the optional argument "

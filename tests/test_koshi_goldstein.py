@@ -32,6 +32,7 @@ def test_koshi_goldstein_all_residues() -> None:
     assert koshi_goldstein("W", "ARG", MatrixType.ALL_RESIDUES, False, warning=False) == 0.4
     assert koshi_goldstein("R", "-", MatrixType.ALL_RESIDUES, False, warning=False) == 11.3
     assert koshi_goldstein("-", "R", MatrixType.ALL_RESIDUES, False, warning=False) == 2.0
+    assert koshi_goldstein("A", "L", MatrixType.ALL_RESIDUES, False, warning=False) == 1.6
 
     # With warning; tests still go through?
     # All Residues
