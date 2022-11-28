@@ -168,7 +168,7 @@ unit_tests_simple.py                             4      4     0%
 TOTAL                                          387     12    97%
 ```
 
-### mypy detail
+#### mypy detail
 ```
 =============================== mypy ===============================
 Success: no issues found in 20 source files
