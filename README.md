@@ -186,7 +186,7 @@ If you use this software, please cite it as below.
 
 `
 Lhotte, R. & Taupin, J. (2022).
-Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.2.1.1) [Computer software].
+Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.3.0.0) [Computer software].
 https://doi.org/10.5281/zenodo.7013169
 `
 
@@ -198,7 +198,7 @@ https://doi.org/10.5281/zenodo.7013169
     doi = {10.5281/zenodo.7013169},
     month = {8},
     title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-    version = {0.2.1.1},
+    version = {0.3.0.0},
     year = {2022}
 }
 ```
