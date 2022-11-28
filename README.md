@@ -141,12 +141,12 @@ https://doi.org/10.5281/zenodo.7013169
 
 ```
 @software{lhotte_pard_2022,
-author = {Lhotte, Romain and Taupin, Jean-Luc},
-doi = {10.5281/zenodo.7013169},
-month = {8},
-title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-version = {0.2.1.0},
-year = {2022}
+    author = {Lhotte, Romain and Taupin, Jean-Luc},
+    doi = {10.5281/zenodo.7013169},
+    month = {8},
+    title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
+    version = {0.2.1.0},
+    year = {2022}
 }
 ```
 
