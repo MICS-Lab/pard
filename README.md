@@ -131,35 +131,48 @@ which are the correct values
 - 1: Argument amino_acid_1 or amino_acid_2 is neither of length 1 nor length 3. See error message.
 ```
 
-#### Unit tests
+### About the source code
+- Follows [PEP8](https://peps.python.org/pep-0008/) Style Guidelines.
+- All functions are unit-tested with [pytest](https://docs.pytest.org/en/6.2.x/).
+- All variables are correctly type-hinted, reviewed with [static type checker](https://mypy.readthedocs.io/en/stable/)
+`mypy`.
+- All functions are documented with [docstrings](https://www.python.org/dev/peps/pep-0257/).
+
+
+#### Unit tests details
 ```
+---------- coverage: platform win32, python 3.10.2-final-0 -----------
 Name                                         Stmts   Miss  Cover
 ----------------------------------------------------------------
 pard\__init__.py                                 3      0   100%
-pard\epstein.py                                  5      0   100%
-pard\experimental_exchangeability.py             8      1    88%
-pard\grantham.py                                 3      0   100%
-pard\miyata.py                                   3      0   100%
-pard\raw_python_dictionaries.py                 35      0   100%
-pard\sneath.py                                   3      0   100%
+pard\_handling_3_letter_code_decorator.py       18      2    89%
+pard\_raw_python_dictionaries.py                53      0   100%
+pard\epstein.py                                  7      0   100%
+pard\experimental_exchangeability.py            10      0   100%
+pard\grantham.py                                 5      0   100%
+pard\koshi_goldstein.py                         39      2    95%
+pard\miyata.py                                   5      0   100%
+pard\sneath.py                                   5      0   100%
 tests\__init__.py                                0      0   100%
-tests\test_epstein.py                           34      0   100%
-tests\test_experimental_exchangeability.py      22      0   100%
-tests\test_grantham.py                          18      0   100%
-tests\test_miyata.py                            18      0   100%
+tests\test_epstein.py                           46      0   100%
+tests\test_experimental_exchangeability.py      30      0   100%
+tests\test_grantham.py                          25      0   100%
+tests\test_koshi_goldstein.py                   60      0   100%
+tests\test_miyata.py                            25      0   100%
 tests\test_pard.py                               3      0   100%
-tests\test_raw_python_dictionaries.py           12      0   100%
-tests\test_sneath.py                            18      0   100%
+tests\test_raw_python_dictionaries.py           24      0   100%
+tests\test_sneath.py                            21      0   100%
+unit_tests_mypy.py                               4      4     0%
+unit_tests_simple.py                             4      4     0%
 ----------------------------------------------------------------
-TOTAL                                          185      1    99%
+TOTAL                                          387     12    97%
 ```
 
-
-### About the source code
-- Follows [PEP8](https://peps.python.org/pep-0008/) Style Guidelines.
-- All variables are correctly type-hinted, reviewed with [static type checker](https://mypy.readthedocs.io/en/stable/)
-`mypy`.
-
+### mypy detail
+```
+=============================== mypy ===============================
+Success: no issues found in 20 source files
+```
 
 ### Useful links:
 - [Corresponding GitHub repository](https://github.com/MICS-Lab/pard)
