@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pard"
-version = "0.2.1.0"
+version = "0.2.1.1"
 description = "Physicochemical Amino acid Replacement Distances"
 authors = ["JasonMendoza2008 <lhotteromain@gmail.com>"]
 readme = "README.md"
@@ -10,6 +10,7 @@ packages = [
 
 [tool.poetry.dependencies]
 python = "^3.10"
+pytest-cov = "^4.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.2.0"

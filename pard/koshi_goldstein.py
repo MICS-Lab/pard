@@ -81,3 +81,7 @@ def koshi_goldstein(
                 return pard._raw_python_dictionaries.ASYMMETRIC_KOSHI_GOLDSTEIN_BURIED_RESIDUES_DICT[
                     (amino_acid_1, amino_acid_2)
                 ]
+        case _:
+            raise NotImplementedError(
+                "The matrix type is not yet implemented."
+            )
