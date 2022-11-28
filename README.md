@@ -41,49 +41,89 @@ To use `pard`, run `pip install pard` in your terminal.
 
 #### Usage
 ```py
-import pard
-
-amino_acid_1: str = "W"  # Tryptophan
-amino_acid_2: str = "L"  # Leucine
-distance_grantham: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
-distance_sneath: int   = pard.sneath.sneath(amino_acid_1, amino_acid_2)
-distance_ee: float     = pard.experimental_exchangeability.experimental_exchangeability(
-    amino_acid_1, 
-    amino_acid_2, 
-    False, 
-    warning=False
-)
-
-print(distance_grantham)
-print(distance_sneath)
-print(distance_ee)
-```
-or equivalently
-```py
+## Imports
 from pard.grantham import grantham
 from pard.sneath import sneath
 from pard.experimental_exchangeability import experimental_exchangeability
+from pard.koshi_goldstein import koshi_goldstein, MatrixType
 
+
+## Basic examples
 amino_acid_1: str = "W"  # Tryptophan
 amino_acid_2: str = "L"  # Leucine
 distance_grantham: int = grantham(amino_acid_1, amino_acid_2)
-distance_sneath: int   = sneath(amino_acid_1, amino_acid_2)
-distance_ee: float     = experimental_exchangeability(amino_acid_1, amino_acid_2, False, warning=False)
-
 print(distance_grantham)
+
+distance_sneath: int   = sneath(amino_acid_1, amino_acid_2)
 print(distance_sneath)
+
+distance_ee: float     = experimental_exchangeability(
+    amino_acid_1, 
+    amino_acid_2, 
+    False, 
+    warning=True
+)
 print(distance_ee)
+
+
+## More subtle examples
+# Koshi-Goldstein has several scores and can estimate the likelihood of InDels
+distance_koshi_goldstein_all: float = koshi_goldstein(
+    "-",
+    "A",
+    MatrixType.ALL_RESIDUES,
+    False,
+    warning=True
+)
+print(distance_koshi_goldstein_all)
+```
+or equivalently
+```py
+## Imports
+import pard
+
+
+## Basic examples
+amino_acid_1: str = "W"  # Tryptophan
+amino_acid_2: str = "L"  # Leucine
+distance_grantham: int = pard.grantham.grantham(amino_acid_1, amino_acid_2)
+print(distance_grantham)
+
+distance_sneath: int   = pard.sneath.sneath(amino_acid_1, amino_acid_2)
+print(distance_sneath)
+
+distance_ee: float     = pard.experimental_exchangeability.experimental_exchangeability(
+    amino_acid_1,
+    amino_acid_2,
+    False,
+    warning=True
+)
+print(distance_ee)
+
+
+## More subtle examples
+# Koshi-Goldstein has several scores and can estimate the likelihood of InDels
+distance_koshi_goldstein_all: float = pard.koshi_goldstein.koshi_goldstein(
+    "-",
+    "A",
+    pard.koshi_goldstein.MatrixType.ALL_RESIDUES,
+    False,
+    warning=True
+)
+print(distance_koshi_goldstein_all)
 ```
 will output:
 ```
 >>> 61
 >>> 30
 >>> 177
+>>> 1.6
 ```
 which are the correct values 
 [[1]](https://www.science.org/doi/10.1126/science.185.4154.862)
 [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123)
 [[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/)
+[[6]](https://academic.oup.com/peds/article-abstract/8/7/641/1465446)
 .
 
 #### Exit codes:
@@ -162,3 +202,5 @@ theoretical biology, 12(2), pp.157-195.
 Journal of molecular evolution, 12(3), pp.219-236.
 - [5] Yampolsky, L.Y. and Stoltzfus, A., 2005. The exchangeability of amino acids in proteins. Genetics, 170(4), 
 pp.1459-1472.
+- [6] Koshi, J.M. and Goldstein, R.A., 1995. Context-dependent optimal substitution matrices. Protein Engineering,
+Design and Selection, 8(7), pp.641-645.
