@@ -38,12 +38,14 @@ def test_length_dict() -> None:
         symmetric_koshi_goldstein_exposed_residues_dict,
         symmetric_koshi_goldstein_buried_residues_dict,
         symmetric_koshi_goldstein_coil_residues_dict,
+        symmetric_koshi_goldstein_turn_residues_dict,
     ) = make_symmetric_koshi_golstein_dicts()
     (
         asymmetric_koshi_goldstein_all_residues_dict,
         asymmetric_koshi_goldstein_exposed_residues_dict,
         asymmetric_koshi_goldstein_buried_residues_dict,
         asymmetric_koshi_goldstein_coil_residues_dict,
+        asymmetric_koshi_goldstein_turn_residues_dict,
     ) = make_asymmetric_koshi_golstein_dicts()
 
     ## 20x20 matrices
@@ -60,7 +62,9 @@ def test_length_dict() -> None:
     assert(len(symmetric_koshi_goldstein_exposed_residues_dict) == 441)
     assert(len(symmetric_koshi_goldstein_buried_residues_dict) == 441)
     assert(len(symmetric_koshi_goldstein_coil_residues_dict) == 441)
+    assert(len(symmetric_koshi_goldstein_turn_residues_dict) == 441)
     assert(len(asymmetric_koshi_goldstein_all_residues_dict) == 441)
     assert(len(asymmetric_koshi_goldstein_exposed_residues_dict) == 441)
     assert(len(asymmetric_koshi_goldstein_buried_residues_dict) == 441)
     assert(len(asymmetric_koshi_goldstein_coil_residues_dict) == 441)
+    assert(len(asymmetric_koshi_goldstein_turn_residues_dict) == 441)

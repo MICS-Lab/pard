@@ -122,3 +122,28 @@ def test_koshi_goldstein_coil_residues() -> None:
         assert koshi_goldstein("-", "-", MatrixType.COIL, symmetric_, warning=True) == 60.6
         assert koshi_goldstein("A", "A", MatrixType.COIL, symmetric_, warning=True) == 55.6
         assert koshi_goldstein("Ala", "Ala", MatrixType.COIL, symmetric_, warning=True) == 55.6
+
+
+def test_koshi_goldstein_turn_residues() -> None:
+    """
+    Tests the turn residues koshi_golstein matrix
+
+    :return: Nothing
+    """
+    # Symmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.TURN, True, warning=False) == pytest.approx((15.8+3.1)/2)
+    assert koshi_goldstein("-", "A", MatrixType.TURN, True, warning=False) == pytest.approx((3.1+15.8)/2)
+
+    # Asymmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.TURN, False, warning=False) == 15.8
+    assert koshi_goldstein("-", "A", MatrixType.TURN, False, warning=False) == 3.1
+
+    # With warning; tests still go through?
+    # Exposed Residues
+    for symmetric_ in True, False:
+        assert koshi_goldstein("-", "-", MatrixType.TURN, symmetric_, warning=True) == 74.2
+        assert koshi_goldstein("A", "A", MatrixType.TURN, symmetric_, warning=True) == 54.3
+        assert koshi_goldstein("Ala", "Ala", MatrixType.TURN, symmetric_, warning=True) == 54.3
+        assert koshi_goldstein("R", "R", MatrixType.TURN, symmetric_, warning=True) == 68.1
+        assert koshi_goldstein("Arg", "Arg", MatrixType.TURN, symmetric_, warning=True) == 68.1
+
