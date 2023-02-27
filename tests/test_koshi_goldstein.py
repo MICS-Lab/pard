@@ -147,3 +147,28 @@ def test_koshi_goldstein_turn_residues() -> None:
         assert koshi_goldstein("R", "R", MatrixType.TURN, symmetric_, warning=True) == 68.1
         assert koshi_goldstein("Arg", "Arg", MatrixType.TURN, symmetric_, warning=True) == 68.1
 
+
+def test_koshi_goldstein_helix_residues() -> None:
+    """
+    Tests the alpha helix residues koshi_golstein matrix
+
+    :return: Nothing
+    """
+    # Symmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.HELIX, True, warning=False) == pytest.approx((9.1+1.7)/2)
+    assert koshi_goldstein("-", "A", MatrixType.HELIX, True, warning=False) == pytest.approx((1.7+9.1)/2)
+
+    # Asymmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.HELIX, False, warning=False) == 9.1
+    assert koshi_goldstein("-", "A", MatrixType.HELIX, False, warning=False) == 1.7
+
+    # With warning; tests still go through?
+    # Exposed Residues
+    for symmetric_ in True, False:
+        assert koshi_goldstein("-", "-", MatrixType.HELIX, symmetric_, warning=True) == 70.7
+        assert koshi_goldstein("A", "A", MatrixType.HELIX, symmetric_, warning=True) == 63.1
+        assert koshi_goldstein("Ala", "Ala", MatrixType.HELIX, symmetric_, warning=True) == 63.1
+        assert koshi_goldstein("R", "R", MatrixType.HELIX, symmetric_, warning=True) == 68.9
+        assert koshi_goldstein("Arg", "Arg", MatrixType.HELIX, symmetric_, warning=True) == 68.9
+        assert koshi_goldstein("W", "W", MatrixType.HELIX, symmetric_, warning=True) == 84.5
+        assert koshi_goldstein("Trp", "Trp", MatrixType.HELIX, symmetric_, warning=True) == 84.5
