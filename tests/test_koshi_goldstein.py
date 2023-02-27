@@ -92,9 +92,33 @@ def test_koshi_goldstein_buried_residues() -> None:
 
     # With warning; tests still go through?
     # Exposed Residues
-    assert koshi_goldstein("-", "-", MatrixType.BURIED, False, warning=True) == 79.2
-    assert koshi_goldstein("A", "A", MatrixType.BURIED, False, warning=True) == 76.3
-    assert koshi_goldstein("Ala", "Ala", MatrixType.BURIED, False, warning=True) == 76.3
-    assert koshi_goldstein("-", "-", MatrixType.BURIED, True, warning=True) == 79.2
-    assert koshi_goldstein("A", "A", MatrixType.BURIED, True, warning=True) == 76.3
-    assert koshi_goldstein("Ala", "Ala", MatrixType.BURIED, True, warning=True) == 76.3
+    for symmetric_ in [True, False]:
+        assert koshi_goldstein("-", "-", MatrixType.BURIED, symmetric_, warning=True) == 79.2
+        assert koshi_goldstein("A", "A", MatrixType.BURIED, symmetric_, warning=True) == 76.3
+        assert koshi_goldstein("Ala", "Ala", MatrixType.BURIED, symmetric_, warning=True) == 76.3
+
+
+def test_koshi_goldstein_coil_residues() -> None:
+    """
+    Tests the coil residues koshi_golstein matrix
+
+    :return: Nothing
+    """
+    # Symmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.COIL, True, warning=False) == pytest.approx((19.0+3.0)/2)
+    assert koshi_goldstein("-", "A", MatrixType.COIL, True, warning=False) == pytest.approx((3.0+19.0)/2)
+    assert koshi_goldstein("P", "I", MatrixType.COIL, True, warning=False) == pytest.approx((0.3+0.9)/2)
+    assert koshi_goldstein("I", "P", MatrixType.COIL, True, warning=False) == pytest.approx((0.9+0.3)/2)
+
+    # Asymmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.COIL, False, warning=False) == 19.0
+    assert koshi_goldstein("-", "A", MatrixType.COIL, False, warning=False) == 3.0
+    assert koshi_goldstein("P", "I", MatrixType.COIL, False, warning=False) == 0.3
+    assert koshi_goldstein("I", "P", MatrixType.COIL, False, warning=False) == 0.9
+
+    # With warning; tests still go through?
+    # Exposed Residues
+    for symmetric_ in True, False:
+        assert koshi_goldstein("-", "-", MatrixType.COIL, symmetric_, warning=True) == 60.6
+        assert koshi_goldstein("A", "A", MatrixType.COIL, symmetric_, warning=True) == 55.6
+        assert koshi_goldstein("Ala", "Ala", MatrixType.COIL, symmetric_, warning=True) == 55.6
