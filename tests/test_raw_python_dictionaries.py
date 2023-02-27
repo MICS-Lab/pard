@@ -45,6 +45,7 @@ def test_length_dict() -> None:
         symmetric_koshi_goldstein_coil_residues_dict,
         symmetric_koshi_goldstein_turn_residues_dict,
         symmetric_koshi_goldstein_helix_residues_dict,
+        symmetric_koshi_goldstein_sheet_residues_dict,
     ) = make_symmetric_koshi_golstein_dicts()
     (
         asymmetric_koshi_goldstein_all_residues_dict,
@@ -53,6 +54,7 @@ def test_length_dict() -> None:
         asymmetric_koshi_goldstein_coil_residues_dict,
         asymmetric_koshi_goldstein_turn_residues_dict,
         asymmetric_koshi_goldstein_helix_residues_dict,
+        asymmetric_koshi_goldstein_sheet_residues_dict,
     ) = make_asymmetric_koshi_golstein_dicts()
 
     ## Asserting length of dicts
@@ -74,11 +76,13 @@ def test_length_dict() -> None:
         symmetric_koshi_goldstein_coil_residues_dict,
         symmetric_koshi_goldstein_turn_residues_dict,
         symmetric_koshi_goldstein_helix_residues_dict,
+        symmetric_koshi_goldstein_sheet_residues_dict,
         asymmetric_koshi_goldstein_all_residues_dict,
         asymmetric_koshi_goldstein_exposed_residues_dict,
         asymmetric_koshi_goldstein_buried_residues_dict,
         asymmetric_koshi_goldstein_coil_residues_dict,
         asymmetric_koshi_goldstein_turn_residues_dict,
-        asymmetric_koshi_goldstein_helix_residues_dict
+        asymmetric_koshi_goldstein_helix_residues_dict,
+        asymmetric_koshi_goldstein_sheet_residues_dict,
     ):
         assert(len(koshi_goldstein_dict) == 441)

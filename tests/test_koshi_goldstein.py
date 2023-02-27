@@ -172,3 +172,30 @@ def test_koshi_goldstein_helix_residues() -> None:
         assert koshi_goldstein("Arg", "Arg", MatrixType.HELIX, symmetric_, warning=True) == 68.9
         assert koshi_goldstein("W", "W", MatrixType.HELIX, symmetric_, warning=True) == 84.5
         assert koshi_goldstein("Trp", "Trp", MatrixType.HELIX, symmetric_, warning=True) == 84.5
+
+
+def test_koshi_goldstein_sheet_residues() -> None:
+    """
+    Tests the beta sheet residues koshi_golstein matrix
+
+    :return: Nothing
+    """
+    # Symmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.SHEET, True, warning=False) == pytest.approx((5.8+1.0)/2)
+    assert koshi_goldstein("-", "A", MatrixType.SHEET, True, warning=False) == pytest.approx((1.0+5.8)/2)
+
+    # Asymmetric tests
+    assert koshi_goldstein("A", "-", MatrixType.SHEET, False, warning=False) == 5.8
+    assert koshi_goldstein("-", "A", MatrixType.SHEET, False, warning=False) == 1.0
+
+    # With warning; tests still go through?
+    # Exposed Residues
+    for symmetric_ in True, False:
+        assert koshi_goldstein("-", "-", MatrixType.SHEET, symmetric_, warning=True) == 68.7
+        assert koshi_goldstein("A", "A", MatrixType.SHEET, symmetric_, warning=True) == 64.6
+        assert koshi_goldstein("Ala", "Ala", MatrixType.SHEET, symmetric_, warning=True) == 64.6
+        assert koshi_goldstein("R", "R", MatrixType.SHEET, symmetric_, warning=True) == 66.4
+        assert koshi_goldstein("Arg", "Arg", MatrixType.SHEET, symmetric_, warning=True) == 66.4
+        assert koshi_goldstein("W", "W", MatrixType.SHEET, symmetric_, warning=True) == 87.5
+        assert koshi_goldstein("Trp", "Trp", MatrixType.SHEET, symmetric_, warning=True) == 87.5
+
