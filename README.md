@@ -140,32 +140,50 @@ which are the correct values
 
 
 #### Unit tests details
+Coverage
 ```
----------- coverage: platform win32, python 3.10.2-final-0 -----------
 Name                                         Stmts   Miss  Cover
 ----------------------------------------------------------------
 pard\__init__.py                                 3      0   100%
 pard\_handling_3_letter_code_decorator.py       18      2    89%
-pard\_raw_python_dictionaries.py                53      0   100%
+pard\_raw_python_dictionaries.py                61     32    48%
 pard\epstein.py                                  7      0   100%
 pard\experimental_exchangeability.py            10      0   100%
 pard\grantham.py                                 5      0   100%
-pard\koshi_goldstein.py                         39      2    95%
+pard\koshi_goldstein.py                         55     24    56%
 pard\miyata.py                                   5      0   100%
 pard\sneath.py                                   5      0   100%
 tests\__init__.py                                0      0   100%
 tests\test_epstein.py                           46      0   100%
 tests\test_experimental_exchangeability.py      30      0   100%
 tests\test_grantham.py                          25      0   100%
-tests\test_koshi_goldstein.py                   60      0   100%
+tests\test_koshi_goldstein.py                  108     50    54%
 tests\test_miyata.py                            25      0   100%
 tests\test_pard.py                               3      0   100%
-tests\test_raw_python_dictionaries.py           24      0   100%
+tests\test_raw_python_dictionaries.py           20     11    45%
 tests\test_sneath.py                            21      0   100%
-unit_tests_mypy.py                               4      4     0%
-unit_tests_simple.py                             4      4     0%
+unit_tests_mypy.py                               5      5     0%
+unit_tests_simple.py                             5      5     0%
 ----------------------------------------------------------------
-TOTAL                                          387     12    97%
+TOTAL                                          457    129    72%
+```
+
+#### pytest
+```
+platform win32 -- Python 3.11.1, pytest-7.2.0, pluggy-1.0.0
+plugins: anyio-3.6.2, mypy-0.10.3
+collected 14 items
+
+tests\test_epstein.py .                                                  [  7%]
+tests\test_experimental_exchangeability.py .                             [ 14%]
+tests\test_grantham.py .                                                 [ 21%]
+tests\test_koshi_goldstein.py .......                                    [ 71%]
+tests\test_miyata.py .                                                   [ 78%]
+tests\test_pard.py .                                                     [ 85%]
+tests\test_raw_python_dictionaries.py .                                  [ 92%]
+tests\test_sneath.py .                                                   [100%]
+
+============================= 14 passed in 0.06s ==============================
 ```
 
 #### mypy detail
@@ -186,7 +204,7 @@ If you use this software, please cite it as below.
 
 `
 Lhotte, R. & Taupin, J. (2022).
-Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.3.0.0) [Computer software].
+Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.4.0.0) [Computer software].
 https://doi.org/10.5281/zenodo.7013169
 `
 
@@ -198,7 +216,7 @@ https://doi.org/10.5281/zenodo.7013169
     doi = {10.5281/zenodo.7013169},
     month = {8},
     title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-    version = {0.3.0.0},
+    version = {0.4.0.0},
     year = {2022}
 }
 ```
