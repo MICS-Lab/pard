@@ -34,7 +34,12 @@ def koshi_goldstein(
     """
     :param amino_acid_1: 1 letter code of the first amino acid
     :param amino_acid_2: 1 letter code of the third amino acid
-    :param matrix_type: which optimal Koshi-Goldstein substitution matrix is desired
+    :param matrix_type: which optimal Koshi-Goldstein substitution matrix is desired, choose from the 15 Koshi Goldstein
+                        available matrices: MatrixType.ALL_RESIDUES, MatrixType.HELIX, MatrixType.SHEET,
+                        MatrixType.EXPOSED, MatrixType.BURIED, MatrixType.TURN, MatrixType.COIL,
+                        MatrixType.BURIED_HELIX, MatrixType.BURIED_SHEET, MatrixType.EXPOSED_HELIX,
+                        MatrixType.EXPOSED_SHEET, MatrixType.BURIED_TURN, MatrixType.BURIED_COIL,
+                        MatrixType.EXPOSED_TURN, MatrixType.EXPOSED_COIL
     :param symmetric: whether the symmetric version of the matrix is wanted or not (i.e. exchanges of known* or
                       unknown direction)
                       * amino_acid_1 -> amino_acid_2
