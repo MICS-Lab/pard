@@ -9,13 +9,13 @@ def test_experimental_exchangeability() -> None:
     assert experimental_exchangeability("W", "I", True, warning=False) == 73  # None ting
     assert experimental_exchangeability("I", "W", True, warning=False) == 73  # None ting
 
-    assert experimental_exchangeability("N", "N", True, warning=False) == 0
-    assert experimental_exchangeability("I", "I", True, warning=False) == 0
-    assert experimental_exchangeability("L", "L", True, warning=False) == 0
-    assert experimental_exchangeability("M", "M", True, warning=False) == 0
-    assert experimental_exchangeability("W", "W", True, warning=False) == 0
-    assert experimental_exchangeability("H", "H", True, warning=False) == 0
-    assert experimental_exchangeability("His", "His", True, warning=False) == 0
+    assert experimental_exchangeability("N", "N", True, warning=False) == 1000
+    assert experimental_exchangeability("I", "I", True, warning=False) == 1000
+    assert experimental_exchangeability("L", "L", True, warning=False) == 1000
+    assert experimental_exchangeability("M", "M", True, warning=False) == 1000
+    assert experimental_exchangeability("W", "W", True, warning=False) == 1000
+    assert experimental_exchangeability("H", "H", True, warning=False) == 1000
+    assert experimental_exchangeability("His", "His", True, warning=False) == 1000
 
     # Asymmetric tests
     assert experimental_exchangeability("C", "W", False, warning=False) == 139
@@ -28,14 +28,14 @@ def test_experimental_exchangeability() -> None:
     assert experimental_exchangeability("W", "I", False, warning=False) is None
     assert experimental_exchangeability("I", "W", False, warning=False) == 73
 
-    assert experimental_exchangeability("N", "N", False, warning=False) == 0
-    assert experimental_exchangeability("I", "I", False, warning=False) == 0
-    assert experimental_exchangeability("L", "L", False, warning=False) == 0
-    assert experimental_exchangeability("M", "M", False, warning=False) == 0
-    assert experimental_exchangeability("W", "W", False, warning=False) == 0
-    assert experimental_exchangeability("H", "H", False, warning=False) == 0
-    assert experimental_exchangeability("His", "His", False, warning=False) == 0
+    assert experimental_exchangeability("N", "N", False, warning=False) == 1000
+    assert experimental_exchangeability("I", "I", False, warning=False) == 1000
+    assert experimental_exchangeability("L", "L", False, warning=False) == 1000
+    assert experimental_exchangeability("M", "M", False, warning=False) == 1000
+    assert experimental_exchangeability("W", "W", False, warning=False) == 1000
+    assert experimental_exchangeability("H", "H", False, warning=False) == 1000
+    assert experimental_exchangeability("His", "His", False, warning=False) == 1000
 
     # With warning; run still goes through
-    assert experimental_exchangeability("H", "H", False, warning=True) == 0
-    assert experimental_exchangeability("His", "His", False, warning=True) == 0
+    assert experimental_exchangeability("H", "H", False, warning=True) == 1000
+    assert experimental_exchangeability("His", "His", False, warning=True) == 1000
