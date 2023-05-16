@@ -19,7 +19,7 @@ def experimental_exchangeability(
                       * amino_acid_1 -> amino_acid_2
     :param warning: Set warning to False to stop seeing the warning
 
-    :return: An integer / float / None representing the experimental exchangeability distance between amino_acid_1 and
+    :return: An integer / float / None representing the experimental exchangeability between amino_acid_1 and
              amino_acid_2 (x1000)
     """
     if warning:
