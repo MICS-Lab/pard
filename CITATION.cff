@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below. Lhotte, R., & Taupin, J. (2022). Physicochemical Amino acid
-          Replacement Distances (PARD) package (Version 0.5.0.0) [Computer software].
+          Replacement Distances (PARD) package (Version 0.6.0.0) [Computer software].
           https://doi.org/10.5281/zenodo.7013169"
 authors:
   - family-names: Lhotte
@@ -10,7 +10,7 @@ authors:
     given-names: Jean-Luc
     orcid: https://orcid.org/0000-0002-5766-046X
 title: Physicochemical Amino acid Replacement Distances (PARD) package
-version: 0.5.0.0
+version: 0.6.0.0
 doi: 10.5281/zenodo.7013169
 link: https://github.com/MICS-Lab/pard
 date-released: 2022-08-20

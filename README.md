@@ -13,7 +13,8 @@ amino acid replacement.
 One can look at one or several properties' discrepancy between two amino acids.
 To list only a few: polarity
 [[1]](https://www.science.org/doi/10.1126/science.185.4154.862) [[3]](https://www.nature.com/articles/215355a0) 
-[[4]](https://link.springer.com/article/10.1007/BF01732340),
+[[4]](https://link.springer.com/article/10.1007/BF01732340) 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x),
 molecular volume / relative sizes of amino-acid side chains 
 [[1]](https://www.science.org/doi/10.1126/science.185.4154.862) [[3]](https://www.nature.com/articles/215355a0)
 [[4]](https://link.springer.com/article/10.1007/BF01732340), 
@@ -26,15 +27,16 @@ or at the γ―δ bond [[2]](https://www.sciencedirect.com/science/article/abs/p
 presence of a pyrrolidine ring (proline (P))
 [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123), 
 experimental protein activity and stability after exchanging one amino acid into another
-[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/),
-etc.
+[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/), Chou-Fasman alpha helical, beta strand and reverse turn
+propensity parameters [[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x), etc.
 
 `pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
 straightforward with Python.
 
 One typical use is to establish a 'distance' between a wild-type protein and its mutated version. Sometimes, rather
 than a distance, a similarity is outputted (e.g. with `the Conformational similarity weight matrix`
-[[7]](https://www.sciencedirect.com/science/article/abs/pii/002228369290261H)). The higher the distance, the more
+[[7]](https://www.sciencedirect.com/science/article/abs/pii/002228369290261H) or `EMPAR` 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x)). The higher the distance, the more
 different the two amino acids are. The higher the similarity, the more similar the two amino acids are. Whenever
 a distance is not outputted but rather a similarity, a warning (that the user can turn off) will be raised.
 
@@ -150,7 +152,8 @@ Name                                         Stmts   Miss  Cover
 ----------------------------------------------------------------
 pard\__init__.py                                 3      0   100%
 pard\_handling_3_letter_code_decorator.py       18      2    89%
-pard\_raw_python_dictionaries.py                66      0   100%
+pard\_raw_python_dictionaries.py                71      0   100%
+pard\empar.py                                    8      0   100%
 pard\epstein.py                                  7      0   100%
 pard\experimental_exchangeability.py            10      0   100%
 pard\grantham.py                                 5      0   100%
@@ -159,6 +162,7 @@ pard\koshi_goldstein.py                         55      2    96%
 pard\miyata.py                                   5      0   100%
 pard\sneath.py                                   5      0   100%
 tests\__init__.py                                0      0   100%
+tests\test_empar.py                             26      0   100%
 tests\test_epstein.py                           46      0   100%
 tests\test_experimental_exchangeability.py      30      0   100%
 tests\test_grantham.py                          25      0   100%
@@ -166,37 +170,37 @@ tests\test_kolaskar.py                          26      0   100%
 tests\test_koshi_goldstein.py                  108      0   100%
 tests\test_miyata.py                            25      0   100%
 tests\test_pard.py                               3      0   100%
-tests\test_raw_python_dictionaries.py           22      0   100%
+tests\test_raw_python_dictionaries.py           24      0   100%
 tests\test_sneath.py                            21      0   100%
 unit_tests_simple.py                             5      0   100%
 ----------------------------------------------------------------
-TOTAL                                          493      4    99%
+TOTAL                                          534      4    99%
 ```
 
 #### pytest
 ```
 platform win32 -- Python 3.11.1, pytest-7.2.0, pluggy-1.0.0
 plugins: anyio-3.6.2, mypy-0.10.3
-collected 15 items
+collected 16 items
 
-tests\test_epstein.py .                                              [  6%] 
-tests\test_experimental_exchangeability.py .                         [ 13%] 
-tests\test_grantham.py .                                             [ 20%] 
-tests\test_kolaskar.py .                                             [ 26%] 
-tests\test_koshi_goldstein.py .......                                [ 73%]
-tests\test_miyata.py .                                               [ 80%] 
-tests\test_pard.py .                                                 [ 86%] 
-tests\test_raw_python_dictionaries.py .                              [ 93%]
-tests\test_sneath.py .                                               [100%]
+tests\test_empar.py .                                     [  6%] 
+tests\test_epstein.py .                                   [ 12%] 
+tests\test_experimental_exchangeability.py .              [ 18%] 
+tests\test_grantham.py .                                  [ 25%]
+tests\test_kolaskar.py .                                  [ 31%] 
+tests\test_koshi_goldstein.py .......                     [ 75%]
+tests\test_miyata.py .                                    [ 81%] 
+tests\test_pard.py .                                      [ 87%] 
+tests\test_raw_python_dictionaries.py .                   [ 93%] 
+tests\test_sneath.py .                                    [100%] 
 
-=========================== 15 passed in 0.06s ===========================
-
+====================== 16 passed in 0.11s ====================== 
 ```
 
 #### mypy detail
 ```
 ================================== mypy ==================================
-Success: no issues found in 22 source files
+Success: no issues found in 24 source files
 ```
 
 ### Useful links:
@@ -211,7 +215,7 @@ If you use this software, please cite it as below.
 
 `
 Lhotte, R. & Taupin, J. (2022).
-Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.5.0.0) [Computer software].
+Physicochemical Amino acid Replacement Distances (PARD) package (Version 0.6.0.0) [Computer software].
 https://doi.org/10.5281/zenodo.7013169
 `
 
@@ -223,7 +227,7 @@ https://doi.org/10.5281/zenodo.7013169
     doi = {10.5281/zenodo.7013169},
     month = {8},
     title = {{Physicochemical Amino acid Replacement Distances (PARD) package}},
-    version = {0.5.0.0},
+    version = {0.6.0.0},
     year = {2022}
 }
 ```
