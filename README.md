@@ -32,7 +32,11 @@ etc.
 `pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
 straightforward with Python.
 
-One typical use is to establish a 'distance' between a wild-type protein and its mutated version.
+One typical use is to establish a 'distance' between a wild-type protein and its mutated version. Sometimes, rather
+than a distance, a similarity is outputted (e.g. with `the Conformational similarity weight matrix`
+[[7]](https://www.sciencedirect.com/science/article/abs/pii/002228369290261H)). The higher the distance, the more
+different the two amino acids are. The higher the similarity, the more similar the two amino acids are. Whenever
+a distance is not outputted but rather a similarity, a warning (that the user can turn off) will be raised.
 
 
 ### Getting started
