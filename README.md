@@ -146,50 +146,53 @@ Name                                         Stmts   Miss  Cover
 ----------------------------------------------------------------
 pard\__init__.py                                 3      0   100%
 pard\_handling_3_letter_code_decorator.py       18      2    89%
-pard\_raw_python_dictionaries.py                61     32    48%
+pard\_raw_python_dictionaries.py                66      0   100%
 pard\epstein.py                                  7      0   100%
 pard\experimental_exchangeability.py            10      0   100%
 pard\grantham.py                                 5      0   100%
-pard\koshi_goldstein.py                         55     24    56%
+pard\kolaskar.py                                 8      0   100%
+pard\koshi_goldstein.py                         55      2    96%
 pard\miyata.py                                   5      0   100%
 pard\sneath.py                                   5      0   100%
 tests\__init__.py                                0      0   100%
 tests\test_epstein.py                           46      0   100%
 tests\test_experimental_exchangeability.py      30      0   100%
 tests\test_grantham.py                          25      0   100%
-tests\test_koshi_goldstein.py                  108     50    54%
+tests\test_kolaskar.py                          26      0   100%
+tests\test_koshi_goldstein.py                  108      0   100%
 tests\test_miyata.py                            25      0   100%
 tests\test_pard.py                               3      0   100%
-tests\test_raw_python_dictionaries.py           20     11    45%
+tests\test_raw_python_dictionaries.py           22      0   100%
 tests\test_sneath.py                            21      0   100%
-unit_tests_mypy.py                               5      5     0%
-unit_tests_simple.py                             5      5     0%
+unit_tests_simple.py                             5      0   100%
 ----------------------------------------------------------------
-TOTAL                                          457    129    72%
+TOTAL                                          493      4    99%
 ```
 
 #### pytest
 ```
 platform win32 -- Python 3.11.1, pytest-7.2.0, pluggy-1.0.0
 plugins: anyio-3.6.2, mypy-0.10.3
-collected 14 items
+collected 15 items
 
-tests\test_epstein.py .                                                  [  7%]
-tests\test_experimental_exchangeability.py .                             [ 14%]
-tests\test_grantham.py .                                                 [ 21%]
-tests\test_koshi_goldstein.py .......                                    [ 71%]
-tests\test_miyata.py .                                                   [ 78%]
-tests\test_pard.py .                                                     [ 85%]
-tests\test_raw_python_dictionaries.py .                                  [ 92%]
-tests\test_sneath.py .                                                   [100%]
+tests\test_epstein.py .                                              [  6%] 
+tests\test_experimental_exchangeability.py .                         [ 13%] 
+tests\test_grantham.py .                                             [ 20%] 
+tests\test_kolaskar.py .                                             [ 26%] 
+tests\test_koshi_goldstein.py .......                                [ 73%]
+tests\test_miyata.py .                                               [ 80%] 
+tests\test_pard.py .                                                 [ 86%] 
+tests\test_raw_python_dictionaries.py .                              [ 93%]
+tests\test_sneath.py .                                               [100%]
 
-============================= 14 passed in 0.06s ==============================
+=========================== 15 passed in 0.06s ===========================
+
 ```
 
 #### mypy detail
 ```
-=============================== mypy ===============================
-Success: no issues found in 20 source files
+================================== mypy ==================================
+Success: no issues found in 22 source files
 ```
 
 ### Useful links:
