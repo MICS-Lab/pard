@@ -27,7 +27,9 @@ or at the γ―δ bond [[2]](https://www.sciencedirect.com/science/article/abs/p
 presence of a pyrrolidine ring (proline (P))
 [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123), 
 experimental protein activity and stability after exchanging one amino acid into another
-[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/), Chou-Fasman alpha helical, beta strand and reverse turn
+[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/), Chou-Fasman alpha helical 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x), beta strand 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x) and/or reverse turn
 propensity parameters [[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x), etc.
 
 `pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
