@@ -246,3 +246,7 @@ Journal of molecular evolution, 12(3), pp.219-236.
 pp.1459-1472.
 - [6] Koshi, J.M. and Goldstein, R.A., 1995. Context-dependent optimal substitution matrices. Protein Engineering,
 Design and Selection, 8(7), pp.641-645.
+- [7] Kolaskar, A.S. and Kulkarni-Kale, U., 1992. Sequence alignment approach to pick up conformationally similar
+protein fragments. Journal of molecular biology, 223(4), pp.1053-1061.
+- [8] Rao, J.M., 1987. New scoring matrix for amino acid residue exchanges based on residue characteristic physical
+parameters. International Journal of Peptide and Protein Research, 29(2), pp.276-281.
