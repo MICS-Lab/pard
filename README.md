@@ -27,7 +27,9 @@ or at the γ―δ bond [[2]](https://www.sciencedirect.com/science/article/abs/p
 presence of a pyrrolidine ring (proline (P))
 [[2]](https://www.sciencedirect.com/science/article/abs/pii/0022519366901123), 
 experimental protein activity and stability after exchanging one amino acid into another
-[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/), Chou-Fasman alpha helical, beta strand and reverse turn
+[[5]](https://pubmed.ncbi.nlm.nih.gov/15944362/), Chou-Fasman alpha helical 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x), beta strand 
+[[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x) and/or reverse turn
 propensity parameters [[8]](https://onlinelibrary.wiley.com/doi/10.1111/j.1399-3011.1987.tb02254.x), etc.
 
 `pard` is a package designed to make those **P**hysicochemical **A**mino acid **R**eplacement **D**istances calculations
@@ -246,3 +248,7 @@ Journal of molecular evolution, 12(3), pp.219-236.
 pp.1459-1472.
 - [6] Koshi, J.M. and Goldstein, R.A., 1995. Context-dependent optimal substitution matrices. Protein Engineering,
 Design and Selection, 8(7), pp.641-645.
+- [7] Kolaskar, A.S. and Kulkarni-Kale, U., 1992. Sequence alignment approach to pick up conformationally similar
+protein fragments. Journal of molecular biology, 223(4), pp.1053-1061.
+- [8] Rao, J.M., 1987. New scoring matrix for amino acid residue exchanges based on residue characteristic physical
+parameters. International Journal of Peptide and Protein Research, 29(2), pp.276-281.
